@@ -1,7 +1,17 @@
 import React from "react";
+import Accordion from "./components/Accordion";
+import Search from "./components/Search";
 
-const App = () => {
-  return <div>APP</div>;
+export default () => {
+  const items = [
+    { title: "What is React?", content: "React is a Framework." },
+    { title: "how is react?", content: "Awesome." },
+    { title: "how good is react?", content: "React is a easy." },
+  ];
+  return (
+    <div>
+      {/* <Accordion arrItems={items} />; */}
+      <Search />
+    </div>
+  );
 };
-
-export default App;
