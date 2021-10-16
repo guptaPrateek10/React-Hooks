@@ -4,7 +4,7 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef();
 
-  //useEffect start
+  //useEffect start here
   useEffect(() => {
     const onBodyClick = (event) => {
       if (ref.current?.contains(event.target)) {
@@ -18,8 +18,7 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
       document.removeEventListener("click", onBodyClick);
     };
   }, []);
-  //useEffect ends
-
+  //useEffect ends here
   //mapping data in the dropdowns
   const renderedOptions = options.map((option) => {
     if (option.Value === selected.Value) {
